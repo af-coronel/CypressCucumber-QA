@@ -1,5 +1,5 @@
-import { When, Then, DataTable } from "@badeball/cypress-cucumber-preprocessor";
-const yvytuHome = require("../../Pages/yvitupage");
+import { Then } from "@badeball/cypress-cucumber-preprocessor";
+const yvytuHome = require("../../POM/yvytuPage");
 
 Then("visualiza en el header los botones {string}", (list) => {
     list = list.split(", ");
