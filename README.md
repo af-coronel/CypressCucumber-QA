@@ -30,7 +30,6 @@ Asegúrate de tener instaladas las siguientes dependencias antes de comenzar:
 - Node.js
 - Cypress
 - Cucumber
-- ...
 
 ## 3. Configuración
 
