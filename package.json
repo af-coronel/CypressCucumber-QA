@@ -7,6 +7,9 @@
     "test": "test",
     "cypress:run:yvytu": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/Yvytu/*.feature",
     "cypress:run:fcq": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/FCQ/fcq.feature",
+    "cypress:run:scrollUp": "cypress run --spec 'cypress/e2e/features/FCQ/fcq.feature' --env TAGS='@scrollUp'",
+    "cypress:run:textosFooter": "cypress run --spec 'cypress/e2e/features/FCQ/fcq.feature' --env TAGS='@textosFooter'",
+    "cypress:run:colorFondoLogo": "cypress run --spec 'cypress/e2e/features/FCQ/fcq.feature' --env TAGS='@colorFondoLogo'",
     "generate:report": "node cucumber-html-report.js"
   },
   "repository": {
