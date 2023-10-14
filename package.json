@@ -31,6 +31,5 @@
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e/Step_definitions/**.js",
     "cucumberautocomplete.steps": "cypress/e2e/**.js"
-    
   }  
 }

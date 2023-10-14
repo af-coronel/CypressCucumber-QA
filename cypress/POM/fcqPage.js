@@ -1,18 +1,20 @@
 class ScrollButton {
-  
+
   get scrollToTopButton() {
     return cy.get('#button');
   }
 
-  // Método para scrollear hasta el footer de la página
+  // Scrolle hasta el footer de la página
   scrollDown() {
-    cy.get('footer').scrollIntoView();
-    //cy.scrollTo('bottom')
+    cy.get('footer')
+      .scrollIntoView();
+    //cy.scrollTo('bottom') también me sirvió
   }
 
-  // Método para verificar si la parte superior de la página está visible
+  // Verifica si la parte superior de la página está visible
   isPageAtTop() {
-    return cy.get('#block-panels-mini-logo-fcq-uncor').should('be.visible');
+    return cy.get('#block-panels-mini-logo-fcq-uncor')
+             .should('be.visible');
   }
 
   // Método para verificar que el botón este visible
@@ -24,6 +26,6 @@ class ScrollButton {
   scrollToTop() {
     this.scrollToTopButton.click();
   }
-}
+};
 
 export default new ScrollButton();
