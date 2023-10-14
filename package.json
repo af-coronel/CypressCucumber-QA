@@ -4,7 +4,10 @@
   "description": "tests de cypress con cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cypress:run:yvytu": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/Yvytu/*.feature",
+    "cypress:run:fcq": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/FCQ/fcq.feature",
+    "generate:report": "node cucumber-html-report.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,18 @@
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e/Step_definitions/**.js",
-    "cucumberautocomplete.steps": "cypress/e2e/**.js"
+    "cucumberautocomplete.steps": "cypress/e2e/**.js",
+    "html": {
+      "enabled": true,
+      "output": "reports/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "reports/messages.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "output": "reports/log.json"
+    }
   }  
 }
